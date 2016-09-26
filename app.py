@@ -29,17 +29,19 @@ def blah():
             return k
         rn-=dictionary[k]
 
-job=blah()
+#job=blah()
+
 
 
 @app.route("/occupations")
 def occ():
+    job=blah()
     return render_template("occ.html",dictionary=dictionary, job=job)
 
 
 
 if __name__=="__main__":
-    app.run(debug=True,host='0.0.0.0',port=1339)
+    app.run(debug=True)
 
 
 
